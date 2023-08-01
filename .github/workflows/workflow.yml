@@ -1,7 +1,6 @@
 # File: .github/workflows/workflow.yml
 
-on:
-  workflow_dispatch:
+on: [push]
 
 name: AzureLoginSample
 
@@ -11,7 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
-   - name: Azure Login 
+    - name: Azure Login
+    - uses: azure/login@v1
+      with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     
     - run: |
