@@ -22,6 +22,6 @@ jobs:
           inlineScript: |
             az deployment group create \
             --name StorageAccountDeployment \
-            --resource-group savdevgithubdeploy \
-            --template-file armtemplates/storageaccount.json \
+            --resource-group rg_githubaction \
+            --template-file storageaccount.json \
             --parameters storageAccountType=Standard_GRS
