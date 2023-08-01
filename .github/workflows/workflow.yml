@@ -11,8 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
-    - name: Azure Login
-       uses: Azure/login@v1
+   - name: Azure Login
+  uses: Azure/login@v1
+
 
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     
