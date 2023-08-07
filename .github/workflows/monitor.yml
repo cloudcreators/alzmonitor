@@ -1,0 +1,6 @@
+- name: Send Log to Azure Monitor
+  uses: hoisjp/azure-monitor-action@v0.1
+  with:
+    workspace-id: ${{ secrets.LA_WORKSPACE_ID }}
+    agent-key: ${{ secrets.LA_AGENT_KEY }}
+    json-body: '{message: "Unit Test Finished.", youCanGiveAnyFieldName: true}'
